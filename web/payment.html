@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment & Plans — Zenno AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><a href="index.html">AIZenno</a></div>
+    <h2>Payment & Subscriptions</h2>
+  </header>
+
+  <main class="payment-container">
+    <section class="payment-card">
+      <h3>Choose Your Plan</h3>
+
+      <div class="toggle">
+        <span>Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="planToggle" />
+          <span class="slider round"></span>
+        </label>
+        <span>Yearly (Save 20%)</span>
+      </div>
+
+      <div class="plan-cards">
+        <div class="plan-card">
+          <h3>Starter</h3>
+          <p class="price" data-month="5" data-year="15">$5 /mo</p>
+          <ul>
+            <li>Basic AI chat access</li>
+            <li>Memory enabled</li>
+            <li>1GB data storage</li>
+          </ul>
+          <button class="plan-btn">Subscribe</button>
+        </div>
+
+        <div class="plan-card featured">
+          <h3>Pro</h3>
+          <p class="price" data-month="10" data-year="30">$10 /mo</p>
+          <ul>
+            <li>Advanced AI + Fast replies</li>
+            <li>Custom personality & themes</li>
+            <li>10GB memory cloud</li>
+          </ul>
+          <button class="plan-btn">Subscribe</button>
+        </div>
+
+        <div class="plan-card">
+          <h3>Ultimate</h3>
+          <p class="price" data-month="29.99" data-year="49.99">$29.99 /mo</p>
+          <ul>
+            <li>Unlimited memory</li>
+            <li>Premium models (ZEN-5)</li>
+            <li>Private AI servers</li>
+          </ul>
+          <button class="plan-btn">Subscribe</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  themeToggle.addEventListener("click", () => {
+    if (body.classList.contains("light-mode")) {
+      body.classList.replace("light-mode", "dark-mode");
+      themeToggle.textContent = "dark-mode";
+    } else {
+      body.classList.replace("dark-mode", "light-mode");
+      themeToggle.textContent = "light-mode";
+    }
+  });

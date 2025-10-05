@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Settings — Zenno AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><a href="index.html">AIZenno</a></div>
+    <h2>Account Settings</h2>
+  </header>
+
+  <main class="settings-container">
+    <section class="settings-card">
+      <h3>Profile Information</h3>
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="zenuser@email.com">
+
+        <label>Password</label>
+        <input type="password" placeholder="********">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+1 (555) 123-4567">
+
+        <label>Account Created</label>
+        <input type="text" value="March 14, 2025" disabled>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  themeToggle.addEventListener("click", () => {
+    if (body.classList.contains("light-mode")) {
+      body.classList.replace("light-mode", "dark-mode");
+      themeToggle.textContent = "dark-mode";
+    } else {
+      body.classList.replace("dark-mode", "light-mode");
+      themeToggle.textContent = "light-mode";
+    }
+  });
